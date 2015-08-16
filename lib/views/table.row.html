@@ -5,6 +5,10 @@
 </td>
 {{#each columns}}
 <td>
-    {{ value }}
+    {{#if value.hasSafeValue}}
+        {{{ value }}}
+    {{else}}
+        {{ value }}
+    {{/if}}
 </td>
 {{/each}}

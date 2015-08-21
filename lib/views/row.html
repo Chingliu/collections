@@ -1,0 +1,26 @@
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">View Row</h4>
+            </div>
+            <div class="modal-body">
+                {{#each attrs}}
+                <div class="row-fluid">
+                    <div class="col-xs-4">
+                        <label for="{{key}}">{{key}}</label>
+                    </div>
+                    <div class="col-xs-8">
+                        <input class="form-control" type="text" id="{{key}}" value="{{value}}">
+                    </div>
+                </div>
+                <div class="clearfix"></div><br/>
+                {{/each}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
